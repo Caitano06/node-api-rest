@@ -3,15 +3,18 @@
 **NODE API REST
 
 **Descrição:** 
-O projeto `Node API Rest` é uma aplicação de API RESTful desenvolvida em Node.js, utilizando Express como framework principal. Esta aplicação se conecta a um banco de dados MongoDB e implementa autenticação via JWT (JSON Web Token). A estrutura do projeto facilita a criação de endpoints para operações CRUD (Create, Read, Update, Delete).
+O projeto `Node API Rest` é uma aplicação de API RESTful desenvolvida em Node.js, utilizando Express como framework principal. Esta aplicação se conecta a um banco de dados MongoDB e implementa autenticação via JWT (JSON Web Token). Além disso, o projeto inclui suporte para GraphQL, permitindo consultas flexíveis e eficientes. A estrutura do projeto facilita a criação de endpoints para operações CRUD (Create, Read, Update, Delete) e a definição de esquemas GraphQL.
 
-### Dependências Principais
+### Dependências Principais 
 - `bcrypt`: Para hashing de senhas.
 - `dotenv`: Para gerenciar variáveis de ambiente.
 - `express`: Framework para construção de APIs.
 - `jsonwebtoken`: Para geração e verificação de tokens JWT.
 - `mongoose`: ODM (Object Data Modeling) para MongoDB.
 - `nodemon`: Ferramenta para reiniciar automaticamente o servidor durante o desenvolvimento.
+- `graphql`: Para suporte a GraphQL.
+- `express-graphql`:  Middleware para integrar GraphQL com Express.
+- `apollo-server-express`:  Para uma integração mais avançada de GraphQL com Express.
 
 ### Scripts Disponíveis
 - `start`: Inicia a aplicação.
@@ -58,6 +61,7 @@ O projeto `Node API Rest` é uma aplicação de API RESTful desenvolvida em Node
 node-api-rest/
 ├── src/
 │   ├── controllers/
+|   ├── graphql/
 │   ├── models/
 │   ├── routes/
 │   ├── middlewares/
@@ -67,7 +71,7 @@ node-api-rest/
 ```
 
 ### Entrypoint da Aplicação
-O ponto de entrada da aplicação é o arquivo `src/index.js`, onde o servidor Express é configurado e iniciado.
+O ponto de entrada da aplicação é o arquivo `src/index.js`, onde o servidor Express é configurado e iniciado. O suporte a GraphQL é configurado no arquivo `src/graphql/index.js`.
 
 ### Exemplos de Endpoints
 - **Criação de Usuário:**
